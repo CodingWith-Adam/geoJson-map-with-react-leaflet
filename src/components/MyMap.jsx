@@ -7,7 +7,7 @@ import "./MyMap.css";
 class MyMap extends Component {
   state = { color: "#ffff00" };
 
-  color = ["green", "blue", "yellow", "orange", "grey"];
+  colors = ["green", "blue", "yellow", "orange", "grey"];
 
   componentDidMount() {
     console.log(mapData);
@@ -38,8 +38,8 @@ class MyMap extends Component {
     layer.bindPopup(countryName);
 
     layer.options.fillOpacity = Math.random(); //0-1 (0.1, 0.2, 0.3)
-    // const colorIndex = Math.floor(Math.random() * this.color.length);
-    // layer.options.fillColor = this.color[colorIndex]; //0
+    // const colorIndex = Math.floor(Math.random() * this.colors.length);
+    // layer.options.fillColor = this.colors[colorIndex]; //0
 
     layer.on({
       click: this.changeCountryColor,
